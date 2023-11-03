@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Post, Patch, Param } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Post,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserService } from '../application/service/user.service';
@@ -8,7 +16,7 @@ import { User } from '../domain/user.domain';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @Get('/delete/:id')
+  @Delete('/delete/:id')
   async delete(@Param('id') id: number): Promise<boolean> {
     return this.userService.delete(id);
   }
