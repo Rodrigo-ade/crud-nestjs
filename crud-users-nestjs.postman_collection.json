@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "bd9f4953-e6dd-442d-b07e-4c5cf6b06b9f",
+		"name": "crud-users-nestjs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27430467"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "uid",
+							"value": "1234-1234-1234",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mipassword",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "rodrigo",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "prueba",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "rodrigo",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "miemail@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"value": "imagen_de_algo",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "masculino",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "1112345678",
+							"type": "text"
+						},
+						{
+							"key": "social_insurance_number",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "1995-06-01",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Buenos Aires",
+							"type": "text"
+						},
+						{
+							"key": "street_name",
+							"value": "Calle Falsa",
+							"type": "text"
+						},
+						{
+							"key": "street_address",
+							"value": "56789",
+							"type": "text"
+						},
+						{
+							"key": "zip_code",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Caba",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Argentina",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Juan",
+							"disabled": true
+						},
+						{
+							"key": "age",
+							"value": "11",
+							"disabled": true
+						},
+						{
+							"key": "breed",
+							"value": "Dogo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user by id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Juan",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Leguizamon",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "España",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
